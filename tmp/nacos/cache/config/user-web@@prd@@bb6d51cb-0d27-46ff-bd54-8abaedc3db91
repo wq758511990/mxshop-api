@@ -1,0 +1,20 @@
+{
+    "name": "user-web",
+    "host": "192.168.31.63",
+    "port": 8021,
+    "user-srv": {
+        "name": "user-srv"
+    },
+    "jwt": {
+        "key": "321"
+    },
+    "redis": {
+        "host": "192.168.31.63",
+        "port": 6379
+    },
+    "tags": ["tag1,tag2,user-tag"],
+    "consul": {
+        "host": "127.0.0.1",
+        "port": 8500
+    }
+}
