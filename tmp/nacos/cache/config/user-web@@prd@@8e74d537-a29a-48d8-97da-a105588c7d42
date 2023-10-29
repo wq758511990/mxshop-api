@@ -1,0 +1,24 @@
+{
+  "name": "user-web",
+  "port": 8021,
+  "mysql": {
+    "host": "127.0.0.1",
+    "port": "3306"
+  },
+  "user-srv": {
+    "host": "192.168.31.63",
+    "port": 50051,
+    "name": "user-srv"
+  },
+  "jwt": {
+    "key": "Ebbop3bBREMCVveNTHPSMoG5QSVri60S"
+  },
+  "redis": {
+    "host": "127.0.0.1",
+    "port": 6379
+  },
+  "consul": {
+    "host": "127.0.0.1",
+    "port": 8500
+  }
+}
