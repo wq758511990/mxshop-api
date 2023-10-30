@@ -1,0 +1,17 @@
+{
+    "name": "goods-web",
+    "host": "10.172.23.7",
+    "port": 8022,
+    "tags": ["tag1", "tag2", "tag3"],
+    "goods-srv": {
+        "name": "goods-srv"
+    },
+    "consul": {
+        "host": "10.172.23.7",
+        "port": 8500
+    },
+    "redis": {
+        "host": "10.172.23.7",
+        "port": 6379
+    }
+}
