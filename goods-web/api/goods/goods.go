@@ -206,3 +206,19 @@ func Update(ctx *gin.Context) {
 	}
 	ctx.JSON(http.StatusOK, utils.OK)
 }
+
+func Delete(ctx *gin.Context) {
+	goodsDeleteForm := proto.DeleteGoodsInfo{}
+	if err := ctx.BindJSON(&goodsDeleteForm); err != nil {
+		HandleValidatorError(ctx, err)
+		return
+	}
+
+	_, err := global.GoodsSrvClient.DeleteGoods(context.Background(), &goodsDeleteForm)
+	if err != nil {
+		HandleGrpcErrorToHttp(err, ctx)
+		return
+	}
+	ctx.JSON(http.StatusOK, utils.OK)
+
+}
