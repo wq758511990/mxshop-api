@@ -14,6 +14,7 @@ import (
 	"mxshop-api/goods-web/forms"
 	"mxshop-api/goods-web/global"
 	"mxshop-api/goods-web/proto"
+	"mxshop-api/goods-web/utils"
 	"net/http"
 	"strconv"
 )
@@ -189,4 +190,19 @@ func New(ctx *gin.Context) {
 	}
 
 	ctx.JSON(http.StatusOK, rsp)
+}
+
+func Update(ctx *gin.Context) {
+	goodsUpdateForm := &proto.CreateGoodsInfo{}
+
+	if err := utils.JSONDecode(ctx.Request.Body, &goodsUpdateForm); err != nil {
+		HandleGrpcErrorToHttp(err, ctx)
+		return
+	}
+	_, err := global.GoodsSrvClient.UpdateGoods(context.Background(), goodsUpdateForm)
+	if err != nil {
+		HandleGrpcErrorToHttp(err, ctx)
+		return
+	}
+	ctx.JSON(http.StatusOK, utils.OK)
 }
