@@ -14,6 +14,6 @@ func InitGoodsRouter(Router *gin.RouterGroup) {
 		GoodsRouter.POST("create", middlewares.JWTAuth(), middlewares.IsAdminAuth(), goods.New)
 		GoodsRouter.POST("update", middlewares.JWTAuth(), middlewares.IsAdminAuth(), goods.Update)
 		GoodsRouter.POST("delete", middlewares.JWTAuth(), middlewares.IsAdminAuth(), goods.Delete)
-		GoodsRouter.GET("detail/:id", middlewares.JWTAuth(), middlewares.IsAdminAuth(), goods.GoodsDetail)
+		GoodsRouter.GET("detail/:id", middlewares.JWTAuth(), goods.GoodsDetail)
 	}
 }
