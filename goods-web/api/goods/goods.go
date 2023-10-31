@@ -220,5 +220,22 @@ func Delete(ctx *gin.Context) {
 		return
 	}
 	ctx.JSON(http.StatusOK, utils.OK)
+}
 
+func GoodsDetail(ctx *gin.Context) {
+	goodsIdStr := ctx.Param("id")
+	goodId, err := strconv.Atoi(goodsIdStr)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, utils.Err)
+		return
+	}
+
+	rsp, detailErr := global.GoodsSrvClient.GetGoodsDetail(context.Background(), &proto.GoodInfoRequest{
+		Id: int32(goodId),
+	})
+	if detailErr != nil {
+		HandleGrpcErrorToHttp(detailErr, ctx)
+		return
+	}
+	ctx.JSON(http.StatusOK, rsp)
 }
