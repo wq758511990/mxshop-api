@@ -149,3 +149,13 @@
 2023-10-31T19:27:31.333+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
 2023-10-31T19:28:23.981+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
 2023-10-31T19:34:23.092+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T09:20:35.204+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T09:20:37.515+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T09:55:17.383+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T09:57:24.966+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T10:04:55.312+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T10:13:55.288+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T10:25:36.403+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T10:26:40.838+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T11:27:57.211+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-01T14:25:50.611+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
