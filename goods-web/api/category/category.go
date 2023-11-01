@@ -7,6 +7,7 @@ import (
 	"github.com/golang/protobuf/ptypes/empty"
 	"go.uber.org/zap"
 	"mxshop-api/goods-web/api"
+	"mxshop-api/goods-web/forms"
 	"mxshop-api/goods-web/global"
 	"mxshop-api/goods-web/proto"
 	"mxshop-api/goods-web/utils"
@@ -61,8 +62,59 @@ func Detail(ctx *gin.Context) {
 		reMap["is_tab"] = r.Info.IsTab
 		reMap["sub_categorys"] = subCategorys
 
-		ctx.JSON(http.StatusOK, reMap)
+		ctx.JSON(http.StatusOK, utils.OK.WithData(reMap))
 	}
 	return
 
+}
+
+func New(ctx *gin.Context) {
+	categoryForm := &forms.CategoryForm{}
+
+	if err := ctx.ShouldBindJSON(&categoryForm); err != nil {
+		api.HandleValidatorError(ctx, err)
+		return
+	}
+
+	rsp, err := global.GoodsSrvClient.CreateCategory(context.Background(), &proto.CategoryInfoRequest{
+		ParentCategory: categoryForm.ParentCategory,
+		IsTab:          *categoryForm.IsTab,
+		Level:          categoryForm.Level,
+		Name:           categoryForm.Name,
+	})
+	if err != nil {
+		api.HandleGrpcErrorToHttp(err, ctx)
+		return
+	}
+	ctx.JSON(http.StatusOK, utils.OK.WithData(rsp))
+}
+
+func Delete(ctx *gin.Context) {
+	delForm := map[string]int32{}
+	if err := ctx.ShouldBindJSON(&delForm); err != nil {
+		api.HandleValidatorError(ctx, err)
+		return
+	}
+	_, err := global.GoodsSrvClient.DeleteCategory(context.Background(), &proto.DeleteCategoryRequest{
+		Id: delForm["id"],
+	})
+	if err != nil {
+		api.HandleGrpcErrorToHttp(err, ctx)
+		return
+	}
+	ctx.JSON(http.StatusOK, utils.OK)
+}
+
+func Update(ctx *gin.Context) {
+	updateCategoryForm := proto.CategoryInfoRequest{}
+	if err := ctx.ShouldBindJSON(&updateCategoryForm); err != nil {
+		api.HandleValidatorError(ctx, err)
+		return
+	}
+	_, err := global.GoodsSrvClient.UpdateCategory(context.Background(), &updateCategoryForm)
+	if err != nil {
+		api.HandleGrpcErrorToHttp(err, ctx)
+		return
+	}
+	ctx.JSON(http.StatusOK, utils.OK)
 }

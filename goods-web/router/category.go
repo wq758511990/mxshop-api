@@ -10,5 +10,8 @@ func InitCategoryRouter(r *gin.RouterGroup) {
 	{
 		categoryRouter.GET("list", category.List)
 		categoryRouter.GET("detail", category.Detail)
+		categoryRouter.POST("create", category.New)
+		categoryRouter.POST("delete", category.Delete)
+		categoryRouter.POST("update", category.Update)
 	}
 }
