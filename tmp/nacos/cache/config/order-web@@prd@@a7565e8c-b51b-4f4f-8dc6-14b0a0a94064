@@ -1,0 +1,21 @@
+{
+    "name": "order-web",
+    "host": "10.172.23.7",
+    "port": 8023,
+    "tags": ["tag1", "tag2", "tag3", "order-web"],
+    "order_srv": {
+        "name": "order-srv"
+    },
+    "inventory_srv": {
+        "name": "inventory-srv"
+    },
+    "goods_srv": {
+        "name": "goods-srv"
+    },
+    "consul": {
+        "host": "127.0.0.1",
+        "port": 8500
+    },
+    "alipay": {},
+    "jaeger": {}
+}

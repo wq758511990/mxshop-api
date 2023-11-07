@@ -54,6 +54,7 @@ func Update(ctx *gin.Context) {
 		api.HandleGrpcErrorToHttp(err, ctx)
 		return
 	}
+
 	ctx.JSON(http.StatusOK, utils.OK)
 }
 func Delete(ctx *gin.Context) {

@@ -8,7 +8,7 @@ import (
 	"github.com/nacos-group/nacos-sdk-go/vo"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
-	"mxshop-api/goods-web/global"
+	"mxshop-api/order-web/global"
 )
 
 func InitConfig() {
@@ -17,9 +17,9 @@ func InitConfig() {
 	debug := v.GetBool("MXSHOP")
 	configPath := "config-dev.yaml"
 	if debug {
-		configPath = "goods-web/config-dev.yaml"
+		configPath = "order-web/config-dev.yaml"
 	} else {
-		configPath = "goods-web/config-prd.yaml"
+		configPath = "order-web/config-prd.yaml"
 	}
 	// 设置路径
 	v.SetConfigFile(configPath)
@@ -42,7 +42,7 @@ func InitConfig() {
 	}
 
 	cc := constant.ClientConfig{
-		NamespaceId:         global.NacosConfig.NameSpace, //we can create multiple clients with different namespaceId to support multiple namespace.When namespace is public, fill in the blank string here.
+		NamespaceId:         global.NacosConfig.Namespace, //we can create multiple clients with different namespaceId to support multiple namespace.When namespace is public, fill in the blank string here.
 		TimeoutMs:           5000,
 		NotLoadCacheAtStart: true,
 		LogDir:              "tmp/nacos/log",
