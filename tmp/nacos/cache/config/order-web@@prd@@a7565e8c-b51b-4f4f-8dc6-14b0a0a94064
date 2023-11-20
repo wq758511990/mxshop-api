@@ -1,6 +1,6 @@
 {
     "name": "order-web",
-    "host": "10.172.23.7",
+    "host": "10.172.23.17",
     "port": 8023,
     "tags": ["tag1", "tag2", "tag3", "order-web"],
     "order_srv": {

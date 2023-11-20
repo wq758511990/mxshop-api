@@ -1,6 +1,6 @@
 {
     "name": "user-web",
-    "host": "10.172.23.7",
+    "host": "10.172.23.17",
     "port": 8021,
     "tags": ["tag1", "tag2", "tag3", "user-web"],
     "user-srv": {

@@ -195,3 +195,27 @@
 2023-11-07T17:35:19.737+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
 2023-11-07T17:35:25.556+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
 2023-11-07T17:35:31.538+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:24:48.285+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:25:40.357+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:27:45.182+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:31:46.241+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:33:56.355+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:38:01.947+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T10:39:49.048+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T13:54:57.407+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T13:54:57.425+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"userop-web","group":"prd","tenant":"a7565e8c-b51b-4f4f-8dc6-14b0a0a94064"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-11-20T13:54:57.432+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"userop-web","group":"prd","tenant":"a7565e8c-b51b-4f4f-8dc6-14b0a0a94064"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-11-20T13:54:57.435+0800	[31mERROR[0m	nacos_server/nacos_server.go:199	api</v1/cs/configs>,method:<GET>, params:<{"dataId":"userop-web","group":"prd","tenant":"a7565e8c-b51b-4f4f-8dc6-14b0a0a94064"}>, call domain error:<[404] config data not exist
+> , result:<config data not exist
+>
+2023-11-20T13:54:57.435+0800	[31mERROR[0m	config_client/config_client.go:202	get config from server error:[404] config data not exist
+ 
+2023-11-20T13:54:57.436+0800	[33mWARN[0m	config_client/config_client.go:207	[client.GetConfig] config not found, dataId: userop-web, group: prd, namespaceId: a7565e8c-b51b-4f4f-8dc6-14b0a0a94064.
+2023-11-20T13:58:14.773+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T14:13:48.595+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T14:15:27.084+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>
+2023-11-20T14:16:50.003+0800	[34mINFO[0m	clients/client_factory.go:47	logDir:<tmp/nacos/log>   cacheDir:<tmp/nacos/cache>

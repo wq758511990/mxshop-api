@@ -1,0 +1,20 @@
+{
+    "name": "userop-web",
+    "host": "10.172.23.17",
+    "port": 8024,
+    "tags": ["tag1", "tag2", "tag3", "userop-web"],
+    "consul": {
+        "host": "127。0.0.1",
+        "port": 8500
+    },
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 6379
+    },
+    "goods_srv": {
+        "name": "goods-srv"
+    },
+    "userop_srv": {
+        "name": "userop-srv"
+    }
+}
